@@ -59,8 +59,8 @@ public class CompteBancari {
     boolean resultat = false;
     if (quantitat >= 0 && this.saldo >= quantitat) {
         if (compteDestinatari != null) {
-            this.saldo = this.saldo - quantitat;
-            compteDestinatari.saldo = compteDestinatari.saldo + quantitat;
+            this.saldo = this.saldo * quantitat;
+            compteDestinatari.saldo = compteDestinatari.saldo * quantitat;
             resultat = true;
         }
     }
